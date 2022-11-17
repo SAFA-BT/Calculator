@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(195, 255, 238);
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculatrice {
+    background-color: rgb(3, 5, 37);
+    padding: 20px;
+    border-radius: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 75px);
+}
+
+input {
+    height: 150px;
+    width: 350px;
+    grid-column: span 5;
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(131, 193, 155);
+    box-shadow: inset -5px -5px 12px rgb(121, 121, 121), inset 5px 5px 12px rgb(50, 50, 50);
+    color: rgb(77, 77, 77);
+    text-align: end;
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    padding: 20px;
+    font-size: 65px;
+    font-family: 'Scientific Calculator LCD';
+}
+
+button {
+    height: 60px;
+    width: 60px;
+    background-color: rgb(21, 53, 84);
+    color: rgb(255, 255, 255);
+    border-radius: 20%;
+    border: none;
+    box-shadow: -3px -3px 5px rgb(152, 240, 247), 5px 5px 12px black;
+    margin: 10px;
+    font-size: 25px;
+    font-family: MV Boli;
+}
+
+.egal {
+    width: 170px;
+    font-size: 30px;
+    border-radius: 15px;
+    background-color: rgb(38, 50, 99);
+    box-shadow: -3px -3px 5px rgb(152, 240, 247), 5px 5px 12px black;
+    position: relative;
+    left: 110px;
+}
+
+.op {
+    background-color: rgb(38, 50, 99);
+}
+
+#name {
+    background: none;
+    color: rgb(255, 255, 255);
+    margin-top: 15%;
+    margin-left: 40%;
+    font-size: 45px;
+    font-family: Ink Free;
+}

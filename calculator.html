@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculatrice </title>
+    <link rel="stylesheet" href="calStyle.css">
+    <link href="http://fonts.cdnfonts.com/css/scientific-calculator-lcd" rel="stylesheet">
+    <style>
+        @import url('http://fonts.cdnfonts.com/css/scientific-calculator-lcd');
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="calculatrice">
+            <input type="text" placeholder="0" id="res" />
+            <button onclick="Sqrt('√')" class="op"> √x </button>
+            <button onclick="Puissance('²')" class="op"> X² </button>
+            <button onclick="display('%')" class="op"> % </button>
+            <button onclick="Clear()"> C </button>
+            <button onclick="Effacer()"> ⌫ </button>
+            <button onclick="display('+')" class="op"> + </button>
+            <button onclick="display('-')" class="op"> - </button>
+            <button onclick="display('7')"> 7 </button>
+            <button onclick="display('8')"> 8 </button>
+            <button onclick="display('9')"> 9 </button>
+            <button onclick="display('x')" class="op"> x </button>
+            <button onclick="display('/')" class="op"> / </button>
+            <button onclick="display('4')"> 4 </button>
+            <button onclick="display('5')"> 5 </button>
+            <button onclick="display('6')"> 6 </button>
+            <button onclick="display('.')"> , </button>
+            <button onclick="display('0')"> 0 </button>
+            <button onclick="display('1')"> 1 </button>
+            <button onclick="display('2')"> 2 </button>
+            <button onclick="display('3')"> 3 </button>
+            <p id="name"> SAFA </p>
+            <button onclick="Egal()" class="egal"> = </button>
+
+
+        </div>
+    </div>
+    <script>
+        let res = document.getElementById("res");
+        function display(i) {
+            res.value += i;
+        }
+        function Clear() {
+            res.value = "";
+        }
+        function Effacer() {
+            res.value = res.value.slice(0, -1);
+        }
+        function Egal() {
+            try {
+                res.value = eval(res.value);
+            }
+            catch (error) {
+                alert("Une erreur s'est produite. Veuillez réessayer")
+            }
+        }
+        function Puissance() {
+            res.value = Math.pow(res.value, 2);
+        }
+        function Sqrt() {
+            res.value = Math.sqrt(res.value, 2);
+        }
+    </script>
+</body>
+
+</html>
